@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "Tinkercad to Biofilament Lab",
+  "version": "0.2.7",
+  "description": "Export 3D designs from Tinkercad directly into Biofilament Lab (.lyl format) with one click.",
+  "author": "enguaeu",
+  "homepage_url": "https://github.com/enguaeu/tinkercad-biofilamentlab-importer",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.tinkercad.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.tinkercad.com/things/*/edit*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "importer.js"
+      ],
+      "matches": [
+        "*://*.tinkercad.com/*"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "tinkercad-biofilamentlab-importer",
+  "version": "0.2.7",
+  "description": "Export 3D designs from Tinkercad directly into Biofilament Lab",
+  "homepage": "https://enguaeu.github.io/tinkercad-biofilamentlab-importer/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/enguaeu/tinkercad-biofilamentlab-importer.git"
+  },
+  "author": "enguaeu",
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "python tools/build_browser.py",
+    "package": "python tools/package_release.py"
+  },
+  "devDependencies": {
+    "terser": "5.44.0"
+  }
+}
